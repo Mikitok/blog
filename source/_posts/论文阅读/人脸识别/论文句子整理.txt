@@ -1,0 +1,60 @@
+---
+title: 论文句子整理
+date: 2017-5-31 18:23:29
+tags:
+  - 机器学习
+  - 人脸识别
+  - 论文阅读
+categories:
+  - 论文阅读
+comments: false
+---
+
+## Introduction
+1. Face recognition is an important research hotspot in the fields of pattern recognition and artificial intelligence, and it has attained great success in recent years.
+2. The research of face recognition has great theoretical value, involving subjects of pattern recognition, image processing, computer vision, machine learning, physiology, and so on, and it also has a high correlation with other biometrics recognition methods. 
+3. Face recognition is a technology of using computer to analyze the face images and extract the features for recognizing the identity of the target.
+4. In recent years, face recognition is one of the most active and challenging problems in the field of pattern recognition and artificial intelligence.
+5. Much of the information that perceptually distinguishes faces is contained in the higher order statistics of the images.
+6. To illustrate the efficacy of our proposed method, we compared the performances on two standard databases, i.e., Yale database and the ORL database.
+7. Face recognition technology has a variety of potential applications such as security access control, personal identification to human-computer communication, intelligent human machine interface, and so on. 
+8. Face recognition, as one of the most successful applications of image analysis and understanding, has received considerable attention in the past decades due to its challenging nature and vast range of applications.《Extended local binary patterns for face recognition》
+9. As a classical pattern recognition problem, face recognition primarily consists of two critical subproblems: feature extraction and classifier designation, both of which have been the subject of significant study.《Extended local binary patterns for face recognition》
+10. Most facial extraction approaches can be categorized as utilizing either holistic features or local features. 《Extended local binary patterns for face recognition》
+11. Holistic features are unable to capture local variations in face appearance, and are more sensitive to variations in illumination, expression and occlusions. Local feature based approaches are advantageous in that distributions of face images in local feature space are less affected by changes in facial appearance.《Extended local binary patterns for face recognition》
+12. Face recognition has been extensively studied for many years and it is still attracting much attention because of its big potential in security, surveillance and human-computer intelligent interaction, etc.《Face recognition using FLDA with single training image per person》
+
+## Proposed Method
+1. Assume we have a training set …… with N images,belonging to c classes.
+2. The training set is denoted by A = (A1, A2, ⋯ , AN)
+3. Let X be an n-dimensional (n-D) random vector representing a distribution of inputs in the environment.
+4. In the following sections, we assume that there are L classes and n training samples x1,…,xn. 
+5. We use the Euclidean distance formula to measure the distance between a test sample and all the training samples.
+
+## Databases
+1. The Yale face database contains images with major variations, including changes in illumination conditions, subjects wearing eyeglasses and different facial expressions. This database involves 165 frontal facial images, with 11 images of 15 individuals.
+2. The ORL face database was composed of 400 images (40 individuals and 10 face images for each person) of size 112 × 92. The images are taken at different time, varying lighting slightly, and facial details (open or closed eyes, smiling or non-smiling). All the images were taken against a dark homogeneous background.
+
+
+## Experiments
+1. First, we preprocessed the input images, mainly including histogram equalization, geometry normalization, in order to remove the illuminations, shades, and lighting effects possibly, and then partitioned into a training set from face database and the rest is a testing set.
+2. To evaluate the effectiveness of the algorithms better, each image is scaled down to the size of 100 × 100 pixels.
+3. We use the first five images of every person as a training set, with the person's other six images as a testing set.
+4. Our method which uses logistic regression performs better effectiveness compared to the above methods.
+5. For saving storage of computer and quickening elements’ operation, on each benchmark, we reduced the face images size from 112 × 92 to 24 × 24 for efficiency.
+6. In order to test the efficiency of our algorithms presented above, we perform a series of experiments using the ORL [36] and the FERET [37,38] face databases.
+7. The resolution of ORL images is 46 × 56.
+
+## Analysis
+1. Table 1 demonstrates that the performances of our proposed algorithms are better than ……
+2. The reasons may be that ……
+
+## Algorithm
+1. 【LDA】LDA creates a linear combination of independent features which yields the largest mean differences between the desired classes. The basic idea of LDA is to find a linear transformation such that feature clusters are most separable after the transformation which can be achieved through scatter matrix analysis.n other words, the goal of LDA is to maximize the between-class scatter matrix measure while minimizing the within-class scatter matrix measure.
+2. 【LDA】LDA searches for a linear transformation such that the feature clusters are most separable after the transformation which can be achieved through scatter matrix analysis.
+3. 【SVM】The basic idea of SVM is to adoption of non-linear transform, so that after changing the characteristics of the sample space become linearly separable. And for linear non-separable data, SVM uses a device called kernel mapping to map the data in input space to a high-dimensional feature space in which the problem becomes linear.
+4. 【histogram equalization】Histogram equalization is probably the simplest and most common technique to lessen the effects of lighting variations.
+5. 【PCA】Principal component analysis (PCA) is a popular unsupervised statistical method to find useful image representations.
+6. 【PCA】 The goal in PCA is to find a “better” set of basis images so that in this new basis, the image coordinates (the PCA coefficients) are uncorrelated, i.e., they cannot be linearly predicted from each other. PCA can, thus, be seen as partially implementing Barlow's ideas: Dependencies that show up in the joint distribution of pixels are separated out into the marginal distributions of PCA coefficients.
+7. 【LBP】LBP encodes only the relationship between a central point and its neighbors.《Extended local binary patterns for face recognition》
+

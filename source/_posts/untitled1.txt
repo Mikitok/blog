@@ -1,0 +1,53 @@
+---
+title: matlab图形界面GUIDE编程
+date: 2018-01-25 12:23:29
+tags:
+  - matlab
+categories:
+  - matlab
+comments: false
+---
+
+# 创建图形界面
+&emsp;&emsp;在命令行直接输入guide创建一个空白的GUIDE程序。
+
+# 界面设计
+## 坐标轴控件
+### 设置初始不可见
+&emsp;&emsp;将visible设置为off(框内不打勾)。
+
+## 按钮控件
+### 设置初始不可点击
+&emsp;&emsp;将enable设置为false。
+
+## 下拉框控件
+### 添加下拉选择
+&emsp;&emsp;在string中添加，回车分隔。
+
+# 代码
+## 点击按钮，浏览文件，选择图像并显示
+``` matlab
+[filename,filepath]=uigetfile('*.png','Open');
+img=imresize(double(imread('empty.png')),[100,100]);
+if(filename ~= 0 )
+    filep=strcat(filepath,filename); 
+    image=imresize(double(imread(filep)),[100,100]);
+    set(handles.path,'string',filep);
+    set(handles.pushbutton2,'Enable','on');
+    axes(handles.axes1);     %显示第一张图片
+    imshow(uint8(image));
+    axes(handles.axes2);
+    imshow(uint8(img));
+end
+```
+## 不同控件间传递变量
+1. global
+2. 
+``` matlab
+set(handles.X,'userdata',a);
+```
+这里a就是要传递的变量，现在暂时保存在这个控件的userdata中，需要取出时：
+``` matlab
+a=get(handles.X,'userdata');
+```
+即可将a传递到新函数中，如果要传递的是多个变量，可以使用结构数组进行传递

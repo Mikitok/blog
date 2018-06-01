@@ -1,0 +1,49 @@
+---
+title: 《Face Recognition by Independent Component Analysis》阅读笔记
+date: 2017-10-18 10:02:29
+tags:
+  - 机器学习
+  - 人脸识别
+  - 论文阅读
+  - PCA
+  - 图像重建
+  - LDA
+categories:
+  - 论文阅读
+comments: false
+---
+
+## Pre
+&emsp;&emsp;这篇没有太看懂，用词和语法都不是很习惯。
+
+## Brief Introduction
+&emsp;&emsp;预处理（直方图均衡化+PCA图像重建（新）+LDA+SVM
+
+## Proposed Method
+&emsp;&emsp; They propose a novel method based on PCA image reconstruction and LDA for face recognition. Our proposed methods effectively combine the advantages of PCA, LDA, and SVM.
+
+## Framework
+1. Introduction
+&emsp;1.1 图像表示信息
+&emsp;1.2 PCA（算法+思想+缺点）
+&emsp;1.3 PCA的改进+ICA的思想和有效性
+&emsp;1.4 本文使用的两种结构
+&emsp;1.3 实验基本说明
+2. ICA
+&emsp;2.1 ICA and Other Statistical Techniques
+3. Image Data
+&emsp;3.1 Image preprocessing(histogram equalization)
+&emsp;3.2 PCA image reconstruction
+&emsp;3.3 PCA image reconstruction and LDA for face recognition（算法流程）
+4. Experimental results and discussion
+&emsp;4.1 Experiments on ORL database
+&emsp;4.2 Discussion
+5. Conclusions
+
+## Sentences
+1. Let X be an n-dimensional (n-D) random vector representing a distribution of inputs in the environment.
+
+## Other
+1. 最大熵：infomax
+2. 分解：decompose
+3. 可逆：invertible
